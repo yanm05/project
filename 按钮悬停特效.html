@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <title>Document</title>
+    <style>
+        body{
+            background: #eee;
+        }
+        span{
+            display: inline-block;
+            background: white;
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            margin: 0 10px;
+            text-align: center;
+            position: relative;
+            border-radius: 28%;
+            box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+            opacity: 0.9;
+            overflow: hidden;
+        }
+        span:before{
+            content: "";
+            display: block;
+            width: 120%;
+            height: 120%;
+            position: absolute;
+            transform: rotate(45deg);
+            top: 90%;
+            left: -110%;
+            transition: all 0.35s;
+            transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+            z-index: -1;
+        }
+        span:hover:before{
+            top: -10%;
+            left: -10%;
+        }
+        /* span:focus  */
+        span:hover .fa{
+            transform: scale(1);
+            color: #fff;
+        }
+        
+        span:nth-child(1)::before{
+            background: skyblue;
+        }
+        span:nth-child(2)::before{
+            background: #2e5c99;
+        }
+        span:nth-child(3)::before{
+            background: #f33e26;
+        }
+        span:nth-child(4)::before{
+            background: #d203fb;
+        }
+        span:nth-child(5)::before{
+            background: #e30303;
+        }
+        span .fa{
+            transform: scale(0.8);
+            font-size: 38px;
+            vertical-align: middle;
+            transition: all 0.35s;
+
+        }
+        i:nth-child(1){
+            color: #3b5998;
+        }
+        i:nth-child(2){
+            color: #00aff0;
+        }
+        i:nth-child(3){
+            color: #dc4a38;
+        }
+        i:nth-child(4){
+            color: #bf00ff;
+        }
+        i:nth-child(5){
+            color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span><i class="fa fa-facebook"></i></span>
+        <span><i class="fa fa-twitter"></i></span>
+        <span><i class="fa fa-google"></i></span>
+        <span><i class="fa fa-instagram"></i></span>
+        <span><i class="fa fa-pinterest"></i></span>
+    </div>
+</body>
+</html>

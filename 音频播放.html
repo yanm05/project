@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            background: rgb(154, 204, 224);
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            color: white;
+        }
+        .box{
+            width: 48px;
+            height: 48px;
+            background: rgba(241, 151, 151, 0.89);
+            border-radius: 5px;
+            display: flex;
+            padding: 8px;
+            margin: 300px;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        span{
+            display: inline-block;
+            background: white;
+            width: 10px;
+            animation: active 1.3s ease infinite alternate;
+        }
+        .a1{
+            height: 40%;
+        }
+        .a2{
+            height: 70%;
+            animation-delay: -2.4s;
+        }
+        .a3{
+            height: 80%;
+            animation-delay: -3.7s;
+        }
+        .a4{
+            height: 35%;
+            animation-delay: -5s;
+        }
+        @keyframes active{
+            10% {
+                height: 30%;
+            }
+            30% {
+                height: 100%;
+            }
+            60% {
+                height: 50%;
+            }
+            80% {
+                height: 75%;
+            }
+            100% {
+                height: 20%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="a1"></span>
+        <span class="a2"></span>
+        <span class="a3"></span>
+        <span class="a4"></span>
+    </div>
+</body>
+</html>

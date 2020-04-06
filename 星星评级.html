@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css'>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background: #222;
+        }
+        .box{
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 300px;
+            font-family: "Ionicons";
+        }
+        input{
+            display: none;
+            appearance: none;
+        }
+        input:checked~label::before{
+            opacity: 1;
+        }
+        label{
+            font-size: 80px;
+            color: gold;
+            margin-right: 5px;
+            position: relative;
+        }
+        label:hover{
+            transform: scale(1.2);
+        }
+        label::before {
+            position: absolute;
+            content: "\f384";
+            opacity: 0;
+            transition: 0.3s;
+        }
+        label:hover::before,label:hover~label::before{
+            opacity: 1 !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+       <input id="1" type="radio">
+       <label for="1">
+           <i class="icon ion-md-star-outline"></i>
+        </label>
+       <input id="2" type="radio">
+       <label for="2">
+           <i class="icon ion-md-star-outline"></i>
+        </label>
+       <input id="3" type="radio">
+       <label for="3">
+           <i class="icon ion-md-star-outline"></i>
+        </label>
+       <input id="4" type="radio">
+       <label for="4">
+           <i class="icon ion-md-star-outline"></i>
+        </label>
+       <input id="5" type="radio">
+       <label for="5">
+           <i class="icon ion-md-star-outline"></i>
+        </label>
+    </div>
+</body>
+</html>
